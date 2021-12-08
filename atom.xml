@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2021-12-07T04:52:47.942Z</updated>
+  <updated>2021-12-08T08:05:58.513Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -18,10 +18,10 @@
   
   <entry>
     <title>测试博客</title>
-    <link href="http://example.com/2021/12/07/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/"/>
-    <id>http://example.com/2021/12/07/%E6%B5%8B%E8%AF%95%E5%8D%9A%E5%AE%A2/</id>
+    <link href="http://example.com/posts/d9407122.html"/>
+    <id>http://example.com/posts/d9407122.html</id>
     <published>2021-12-07T04:23:15.000Z</published>
-    <updated>2021-12-07T04:52:47.942Z</updated>
+    <updated>2021-12-08T08:05:58.513Z</updated>
     
     
     <summary type="html">&lt;h1 id=&quot;测试博客&quot;&gt;&lt;a href=&quot;#测试博客&quot; class=&quot;headerlink&quot; title=&quot;测试博客&quot;&gt;&lt;/a&gt;测试博客&lt;/h1&gt;&lt;h2 id=&quot;多发点&quot;&gt;&lt;a href=&quot;#多发点&quot; class=&quot;headerlink&quot; title=&quot;多发点&quot;&gt;&lt;/a&gt;多发点&lt;/h2&gt;&lt;p&gt;大时间紧迫发金&lt;/p&gt;
@@ -35,10 +35,10 @@
   
   <entry>
     <title>Hello World</title>
-    <link href="http://example.com/2021/12/01/hello-world/"/>
-    <id>http://example.com/2021/12/01/hello-world/</id>
+    <link href="http://example.com/posts/4a17b156.html"/>
+    <id>http://example.com/posts/4a17b156.html</id>
     <published>2021-12-01T05:09:57.893Z</published>
-    <updated>2021-12-01T05:09:57.893Z</updated>
+    <updated>2021-12-08T08:03:10.543Z</updated>
     
     
       
