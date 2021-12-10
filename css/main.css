@@ -1979,6 +1979,7 @@ pre code {
 .post-body h5:hover .headerlink,
 .post-body h6:hover .headerlink {
   opacity: 0.5;
+  color: #0593d3;
 }
 .post-body h1:hover .header-anchor:hover,
 .post-body h2:hover .header-anchor:hover,
@@ -1993,6 +1994,7 @@ pre code {
 .post-body h5:hover .headerlink:hover,
 .post-body h6:hover .headerlink:hover {
   opacity: 1;
+  color: #fc6423;
 }
 .post-body .exturl .fa {
   font-size: 0.875em;
