@@ -179,6 +179,9 @@
       <span class="links-of-author-item">
         <a href="mailto:dfgh20080808@qq.com" title="E-Mail → mailto:dfgh20080808@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/608742361/" title="Bilibili → https:&#x2F;&#x2F;space.bilibili.com&#x2F;608742361&#x2F;" rel="noopener" target="_blank"><i class="fab fa-bilibili fa-fw"></i>Bilibili</a>
+      </span>
   </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
     <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdn.jsdelivr.net/npm/@creativecommons/vocabulary@2020.11.3/assets/license_badges/small/by_nc_sa.svg" alt="Creative Commons"></a>
@@ -285,7 +288,7 @@
     let todayMinute = today.getMinutes();
     let todaySecond = today.getSeconds();
     // 在这里设置创站的年月日时分秒
-    let t1 = Date.UTC(2020,02,02,10,24,29);
+    let t1 = Date.UTC(2020,10,24,10,24,29);
     let t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
     let diff = t2-t1;
     let diffYears = Math.floor(diff/years);
@@ -293,7 +296,7 @@
     let diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
     let diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
     let diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-    document.getElementById("sitetime").innerHTML=" 有幸相遇，本站已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+    document.getElementById("sitetime").innerHTML=" 已在此等候 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
   }
   siteTime();
 </script>
