@@ -2933,6 +2933,22 @@ mark.search-keyword {
   background: url("/images/bilibili.svg");
   background-position: center;
   background-repeat: no-repeat;
-  height: 1rem;
-  width: 1rem;
+  height: 1em;
+  width: 1.25em;
+}
+.buttons-con .action-link-wrap a {
+  background: #68c950;
+  padding: 8px 25px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.buttons-con .action-link-wrap a:hover {
+  background: #5a5c6c;
+  color: #fff;
 }

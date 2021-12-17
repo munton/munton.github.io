@@ -192,6 +192,13 @@
         </div>
       </div>
     </div>
+
+    <!-- 加载Aplayer播放器 -->
+    <link rel="stylesheet" href="/dist/APlayer.min.css">
+    <div id="aplayer"></div>
+    <script type="text/javascript" src="/dist/APlayer.min.js"></script>
+    <script type="text/javascript" src="/dist/music.js"></script>
+    
   </aside>
   <div class="sidebar-dimmer"></div>
 
@@ -337,7 +344,10 @@
   </span>
   <span class="author" itemprop="copyrightHolder">sYu Xio</span>
 </div><!-- 网站运行时间统计 -->
-<span id="sitetime"></span>
+<div class="fa-battery">
+  <i class="fa fa-battery-quarter" aria-hidden="true" style="color: #44bf5e;"></i>
+  <span id="sitetime"></span>
+</div>
 <script language="javascript">
   function siteTime(){
     window.setTimeout("siteTime()", 1000);
@@ -362,7 +372,7 @@
     let diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
     let diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
     let diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
-    document.getElementById("sitetime").innerHTML=" 已在此等候 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
+    document.getElementById("sitetime").innerHTML=" 已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
   }
   siteTime();
 </script>
