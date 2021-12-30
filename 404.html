@@ -162,7 +162,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -297,10 +297,11 @@
     let todayMinute = today.getMinutes();
     let todaySecond = today.getSeconds();
     // 在这里设置创站的年月日时分秒
-    let t1 = Date.UTC(2020,10,24,10,24,29);
+    let t1 = Date.UTC(2021,12,01,10,24,29);
     let t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond);
     let diff = t2-t1;
     let diffYears = Math.floor(diff/years);
+    diffYears = diffYears < 10 ? "0" + diffYears : diffYears;
     let diffDays = Math.floor((diff/days)-diffYears*365);
     let diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
     let diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
