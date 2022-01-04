@@ -92,7 +92,7 @@ menu:
   #schedule: /schedule/ || fa fa-calendar
   #sitemap: /sitemap.xml || fa fa-sitemap
   #commonweal: /404/ || fa fa-heartbeat
-  Demo: /demo/ || fa fa-heart
+  #自定义
 
 
 # Enable / Disable menu icons / item badges.# 启用或禁用图标、徽章
