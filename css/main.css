@@ -2936,6 +2936,9 @@ mark.search-keyword {
   height: 1em;
   width: 1.25em;
 }
+.fab.fa-bilibili:hover {
+  color: #000;
+}
 .buttons-con .action-link-wrap a {
   background: #68c950;
   padding: 8px 25px;
