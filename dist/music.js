@@ -23,6 +23,12 @@ const ap = new APlayer({
         artist: '古剑奇谭3-天予风流',
         url: 'https://xp.hifini.com:233/music/%E5%8F%A4%E5%89%91%E5%A5%87%E8%B0%AD3_%E5%8D%83%E7%A7%8B.m4a',
         cover: '/images/天予风流.jpg'
+        },
+        {
+        name: '绝代风华',
+        artist: '天下3-许嵩',
+        url: 'https://wsaudiobssdlbig.yun.kugou.com/202201071352/1d9d393eaa74273259bf93eb5e9c0d05/bss/extname/wsaudio/535dd84298a7c165cb46f6f5ab600f47.mp3',
+        cover: '/images/20220107135934.png'
         }
     ]
 });
