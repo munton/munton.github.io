@@ -36,7 +36,7 @@ code_dir: downloads/code
 i18n_dir: :lang
 skip_render: 
   - "README.md"
-  - "about.html"              
+  - "demo.html"              
 # skip_render: "mypage/**/*"将会直接将 `source/mypage/index.html` 和 `source/mypage/code.js` 不做改动地输出到 'public' 目录
 # 你也可以用这种方法来跳过对指定文章文件的渲染
 # skip_render: "_posts/test-post.md"
