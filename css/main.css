@@ -2930,16 +2930,6 @@ mark.search-keyword {
   position: fixed;
   top: 0;
 }
-.fab.fa-bilibili {
-  background: url("/images/bilibili.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 1em;
-  width: 1.25em;
-}
-.fab.fa-bilibili:hover {
-  color: #000;
-}
 .buttons-con .action-link-wrap a {
   background: #68c950;
   padding: 8px 25px;
