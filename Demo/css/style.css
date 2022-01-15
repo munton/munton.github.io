@@ -38,7 +38,7 @@ nav a:hover {
 
 .auther {
     background-color: #999;
-    background-image: url(../images/matt.jpg);
+    background-image: url('https://cdn.jsdelivr.net/gh/munton/imageHostingService/images/matt.jpg');
     background-position: center 75%;
     background-size: cover;   
     height: 520px;   
