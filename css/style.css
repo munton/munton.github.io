@@ -1,0 +1,140 @@
+<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>/* 版心 */
+.wrapper {
+    margin: 0 auto;
+    width: 85%;
+}
+
+#nav_model {
+    position: fixed;
+    width: 100%;
+}
+
+.bg {
+    background-color: #39f;
+    z-index: 1;
+}
+
+nav ul {   
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;    
+}
+
+nav a {
+    display: block;
+    padding: 15px 15px;
+    font-size: 14px;
+    color: #fff;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: rgb(230, 0, 0);
+}
+
+
+
+.auther {
+    background-color: #999;
+    background-image: url(../images/matt.jpg);
+    background-position: center 75%;
+    background-size: cover;   
+    height: 520px;   
+}
+
+.text {
+    margin: 20px auto;
+    text-align: center;
+}
+
+section h5 {
+    margin: 10px auto;
+    font-size: 24px;
+}
+
+.heart {
+    width: 245px;
+    height: 240px;
+    margin: 250px auto 210px;
+}
+
+.heart span{
+    float: left;
+    width: 25px;
+    height: 25px;
+    background-color: rgb(230, 0, 0);
+    margin-right: 2px;
+    margin-bottom: 2px;
+    border-radius: 3px;
+    transform: translateY(-250px);/*css3 变换*/
+    animation: love 3s infinite;/*动画 名字 时间*/
+    opacity: 0;
+}
+
+@keyframes love{
+    35%,65%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100%{
+        transform: translateY(250px);
+        opacity: 0;
+    }
+}
+
+.heart .tra{
+    background:none;
+}
+
+.heart .delay1{
+    animation-delay: .1s;
+}
+
+.heart .delay2{
+    animation-delay: .2s;
+}
+
+.heart .delay3{
+    animation-delay: .3s;
+}
+
+.heart .delay4{
+    animation-delay: .4s;
+}
+
+.heart .delay5{
+    animation-delay: .6s;
+}
+
+.heart .delay6{
+    animation-delay: .8s;
+}
+
+.confession {
+    font-weight: bold;
+}
+
+
+
+/* 页脚 */
+.footer {
+    height: 80px;
+    margin-top: 50px;
+    padding-top: 20px;
+    background: rgb(243, 243, 243);
+}
+
+.footer p {
+    text-align: center;
+    font-size: 14px;
+    color: #999;
+}
+
+.footer .fa-battery {
+    font-size: 14px;
+    text-align: center;
+    color: #999;
+}

@@ -3,11 +3,146 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Demo</title>
 </head>
-</head>
 <body>
-    我系自定义
+    <header class="header">
+        <nav id="nav_model">
+            <ul>
+              <li><a href="https://munton.github.io/">Home</a></li>
+              <li><a href="">About</a></li>
+              <li><a href="https://munton.github.io/archives/">Archives</a><li>
+            </ul>
+        </nav>
+        <div class="auther">
+        </div>   
+    </header>
+	<div class="wrapper">
+		<main class="main">
+			<section class="text ">
+				<h5>About Me</h5>
+				<p>不想对这世界有太多的期待的头秃90后，纯粹的活着承担生活带来的一切！</p>
+			</section>
+			<div class="heart clearfix">
+				<span class="tra"></span>
+				<span class="delay1"></span>
+				<span class="delay3"></span>
+				<span class="tra"></span>
+				<span class="tra"></span>
+				<span class="tra"></span>
+				<span class="delay1"></span>
+				<span class="delay5"></span>
+				<span class="tra"></span>
+	
+				<span class="delay5"></span>
+				<span class="delay1"></span>
+				<span class="delay2"></span>
+				<span class="delay3"></span>
+				<span class="tra"></span>
+				<span class="delay6"></span>
+				<span class="delay1"></span>
+				<span class="delay2"></span>
+				<span class="delay5"></span>
+	
+				<span class="delay2"></span>
+				<span class="delay1"></span>
+				<span class="delay6" ></span>
+				<span class="delay3"></span>
+				<span class="delay2"></span>
+				<span class="delay1"></span>
+				<span class="delay4"></span>
+				<span class="delay6"></span>
+				<span class="delay3"></span>
+	
+				<span class="delay6"></span>
+				<span class="delay4"></span>
+				<span class="delay1"></span>
+				<span class="delay2"></span>
+				<span class="delay3"></span>
+				<span class="delay2"></span>
+				<span class="delay6"></span>
+				<span class="delay1"></span>
+				<span class="delay4"></span>
+	
+				<span class="tra"></span>
+				<span class="delay3"></span>
+				<span class="delay2"></span>
+				<span class="delay5"></span>
+				<span class="delay6"></span>
+				<span class="delay1"></span>
+				<span class="delay3"></span>
+				<span class="delay4"></span>
+				<span class="tra"></span>
+	
+				<span class="tra"></span>
+				<span class="tra"></span>
+				<span class="delay5"></span>
+				<span class="delay2"></span>
+				<span class="delay1"></span>
+				<span class="delay3"></span>
+				<span class="delay5"></span>
+				<span class="tra"></span>
+				<span class="tra"></span>
+	
+				<span class="tra"></span>
+				<span class="tra"></span>
+				<span class="tra"></span>
+				<span class="delay4"></span>
+				<span class="delay3"></span>
+				<span class="delay5"></span>
+				<span class="tra"></span>
+				<span class="tra"></span>
+				<span class="tra"></span>
+	
+				<span class="tra"></span>
+				<span class="tra"></span>
+				<span class="tra"></span>
+				<span class="tra"></span>
+				<span class="delay4"></span>
+				<span class="tra"></span>
+				<span class="tra"></span>
+				<span class="tra"></span>
+				<span class="tra"></span>
+			</div>
+			<div class="text confession">
+				<p>我心里那一座天下<br>你坐镇笑靥如桃花</p>
+			</div>
+		</main>
+	</div>
+	
+    <footer class="footer">
+        <p>@ 2020-2022</p>
+        <div class="fa-battery">
+            <i class="fa fa-battery-quarter" aria-hidden="true" style="color: #44bf5e;"></i>
+            <span id="runtime"></span>
+        </div>
+    </footer>
+    <script src="js/runtime.js"></script>
+	<script>
+		//获取滚动条当前的位置
+		function getScrollTop() {
+			let scrollTop = 0;
+			if(document.documentElement && document.documentElement.scrollTop) {
+				scrollTop = document.documentElement.scrollTop;
+			} else if(document.body) {
+				scrollTop = document.body.scrollTop;
+			}
+			return scrollTop;
+		}
+		//获取导航栏的dom节点
+		var nav_dom=document.getElementById("nav_model");
+		//监听滚动条
+		window.onscroll = function() {
+			//判断滚动条大于30,导航栏吸顶
+			if(getScrollTop() > 50) {
+				nav_dom.className = "bg";
+			} else {
+				nav_dom.className = "";
+			}
+		}
+	</script>
 </body>
 </html>
