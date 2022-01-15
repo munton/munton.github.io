@@ -2940,3 +2940,19 @@ mark.search-keyword {
   position: fixed;
   top: 0;
 }
+.buttons-con .action-link-wrap a {
+  background: #68c950;
+  padding: 8px 25px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 14px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 10px;
+}
+.buttons-con .action-link-wrap a:hover {
+  background: #5a5c6c;
+  color: #fff;
+}

@@ -168,9 +168,10 @@
 ]]></content>
   </entry>
   <entry>
-    <title>换电脑如何更新Hexo博客</title>
+    <title>NexT使用</title>
     <url>/posts/4a17b177.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="post字数插件"><a class="markdownIt-Anchor" href="#post字数插件"></a> Post字数插件</h3>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h3 id="next使用"><a class="markdownIt-Anchor" href="#next使用"></a> NexT使用</h3>
+<h3 id="post字数插件"><a class="markdownIt-Anchor" href="#post字数插件"></a> Post字数插件</h3>
 <h4 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h4>
 <p>在站点根目录执行以下命令安装：</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ npm install hexo-word-counter </span><br><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
