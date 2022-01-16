@@ -5,6 +5,9 @@ const ap = new APlayer({
     loop: 'all',
     listFolded: true,
     listMaxHeight: 60,
+    preload: 'auto',
+    mutex: true,
+    lrcType: 3,
     audio: [
         {
         name: '等到烟火清凉',
@@ -14,15 +17,16 @@ const ap = new APlayer({
         },
         {
         name: '千秋',
-        artist: '古剑奇谭3-天予风流',
+        artist: '古剑3 - 天予风流',
         url: 'https://xp.hifini.com:233/music/%E5%8F%A4%E5%89%91%E5%A5%87%E8%B0%AD3_%E5%8D%83%E7%A7%8B.m4a',
         cover: '/images/天予风流.jpg'
         },
         {
         name: '绝代风华',
-        artist: '天下3-许嵩',
+        artist: '天下3 - 许嵩',
         url: '/juedaifenghua.mp3',
-        cover: '/images/20220107135934.png'
+        cover: '/images/xusong.png',
+        lrc: '/lrc/绝代风华 - 许嵩.lrc'
         }
     ]
 });

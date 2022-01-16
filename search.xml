@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hexo+Github免费搭建博客</title>
+    <title>Hexo + Github 搭建博客</title>
     <url>/posts/4a17b157.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>[TOC]</p>
 <h2 id="hexo-github-搭建博客"><a class="markdownIt-Anchor" href="#hexo-github-搭建博客"></a> Hexo + Github 搭建博客</h2>
@@ -169,10 +169,10 @@
 ]]></content>
   </entry>
   <entry>
-    <title>NexT使用</title>
+    <title>Hexo 插件使用</title>
     <url>/posts/4a17b177.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>[TOC]</p>
-<h2 id="next使用"><a class="markdownIt-Anchor" href="#next使用"></a> NexT使用</h2>
+<h2 id="hexo-插件使用"><a class="markdownIt-Anchor" href="#hexo-插件使用"></a> Hexo 插件使用</h2>
 <h3 id="post字数插件"><a class="markdownIt-Anchor" href="#post字数插件"></a> Post字数插件</h3>
 <h4 id="安装"><a class="markdownIt-Anchor" href="#安装"></a> 安装</h4>
 <p>在站点根目录执行以下命令安装：</p>
@@ -217,24 +217,13 @@
 <h3 id="hexo-markdown渲染器-upupminghexo-renderer-markdown-it-plus"><a class="markdownIt-Anchor" href="#hexo-markdown渲染器-upupminghexo-renderer-markdown-it-plus"></a> hexo markdown渲染器 @upupming/hexo-renderer-markdown-it-plus</h3>
 <p><a href="https://blog.csdn.net/qq_36667170/article/details/105846999">https://blog.csdn.net/qq_36667170/article/details/105846999</a></p>
 <p><a href="https://bugwz.com/2019/09/17/hexo-markdown-renderer/">https://bugwz.com/2019/09/17/hexo-markdown-renderer/</a></p>
-<h3 id="推荐"><a class="markdownIt-Anchor" href="#推荐"></a> 推荐</h3>
-<p>深度美化和定制Hexo和NexT方法https://www.geminilight.cn/2020/08/16/ST%20-%20%E8%BD%AF%E4%BB%B6%E5%B7%A5%E5%85%B7/st-hexo-next-custom/</p>
-<p>网站的运行时间https://feiju12138.github.io/categories/Hexo/</p>
-<p>分类时间线https://www.chingow.cn/posts/e0970dc8.html</p>
-<p>Hexo Next 8.x 主题添加可切换的暗黑模式https://www.techgrow.cn/posts/abf4aee1.html</p>
-<p>Hexo Next 主题详细配置之一https://www.techgrow.cn/posts/755ff30d.html</p>
-<p>Hexo Next 主题详细配置之二https://www.techgrow.cn/posts/fef9e726.html</p>
-<p><a href="https://github.com/haomingvince/hexo-haomingvince">https://github.com/haomingvince/hexo-haomingvince</a></p>
-<p><a href="https://wylu.me/posts/78c745f0/">https://wylu.me/posts/78c745f0/</a></p>
-<p><a href="https://amnesia-f.github.io/">https://amnesia-f.github.io/</a></p>
-<p>图标https://fontawesome.dashgame.com/</p>
 ]]></content>
   </entry>
   <entry>
-    <title>换电脑如何更新Hexo博客</title>
+    <title>换电脑如何更新 Hexo 博客</title>
     <url>/posts/4a17b167.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>[TOC]</p>
-<h2 id="换电脑如何更新hexo博客"><a class="markdownIt-Anchor" href="#换电脑如何更新hexo博客"></a> 换电脑如何更新Hexo博客</h2>
+<h2 id="换电脑如何更新-hexo-博客"><a class="markdownIt-Anchor" href="#换电脑如何更新-hexo-博客"></a> 换电脑如何更新 Hexo 博客</h2>
 <h3 id="github-pages-hexo-搭建原理"><a class="markdownIt-Anchor" href="#github-pages-hexo-搭建原理"></a> Github Pages + Hexo 搭建原理</h3>
 <p>首先要知道通过Github Pages+Hexo搭建的博客，在username.github.io的仓库存储的是生成的静态网页（Hexo下所有生成的静态文件会放在public/文件夹中，所谓部署deploy其实就是<br />
 将public/文件夹中内容上传到Git仓库username.github.io中。也就是说，你的仓库username.github.io中的文件只是博客（D:/MyBlog或者其他名字）文件夹下的public/下的文件），而真正的原始文件在本地的hexo文件夹中。</p>
@@ -267,7 +256,7 @@
 <p><strong><code>git add -A</code>报错</strong></p>
 <p>原因：已经在当前的存储库中添加了另一个git存储库，外部存储库的克隆将不包含嵌入式存储库的内容</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hint: You<span class="string">&#x27;ve added another git repository inside your current repository.</span></span><br><span class="line"><span class="string">Clones of the outer repository will not contain the contents of the embedded repository and will not know how to obtain it.</span></span><br><span class="line"><span class="string">If you meant to add a submodule, use:git submodule add &lt;url&gt; themes/next</span></span><br><span class="line"><span class="string">If you added this path by mistake, you can remove it from the index with:</span></span><br><span class="line"><span class="string">git rm --cached themes/next</span></span><br><span class="line"><span class="string"> See &quot;git help submodule&quot; for more information.</span></span><br></pre></td></tr></table></figure>
-<p>解决（2选1，推荐使用Git子模块<sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup>）</p>
+<p>解决（2选1，推荐使用Git子模块）</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加子模块非常简单，命令如下：git submodule add &lt;url&gt; &lt;path&gt;其中，url为子模块的路径，path为该子模块存储的目录路径。使用git submodule add带有要开始跟踪的项目的绝对或相对 URL的命令。</span></span><br><span class="line">git submodule add &lt;url&gt; themes/next</span><br><span class="line">如</span><br><span class="line">git submodule add --branch v8.8.1 https://github.com/next-theme/hexo-theme-next themes/next_v8.8.1</span><br><span class="line"><span class="comment"># git submodule add https://github.com/munton/hexo-theme.git</span></span><br><span class="line"><span class="comment"># 用以下方法将它从暂存区index中删除</span></span><br><span class="line">git rm -cached themes/next</span><br></pre></td></tr></table></figure>
 <h3 id="另一台电脑的操作"><a class="markdownIt-Anchor" href="#另一台电脑的操作"></a> 另一台电脑的操作</h3>
 <ul>
@@ -295,19 +284,6 @@
 <p><strong>注意：每次有新的操作的时候，别忘了在另一台电脑上更新</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull hexo <span class="comment">#分支名hexo</span></span><br></pre></td></tr></table></figure>
 <p>以后无论在哪台电脑上，更新以及提交博客，依次执行，<code>git pull</code>，<code>git add .</code>，<code>git commit -m &quot;--&quot;</code>，<code>git push origin hexo</code>，<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>即可。</p>
-<h3 id="推荐阅读"><a class="markdownIt-Anchor" href="#推荐阅读"></a> 推荐阅读</h3>
-<p><a href="https://wylu.me/posts/78c745f0/">Hexo相关问题和优化</a></p>
-<p><a href="https://blog.csdn.net/Yi5528/article/details/121002829">Git学习笔记–Git操作常见问题及解决方案</a></p>
-<p><a href="https://juejin.cn/post/6844904166867861511">Git 可以这么学</a></p>
-<p><a href="https://molunerfinn.com/hexo-travisci-https/#%E6%8C%81%E4%B9%85%E5%8C%96%E6%9E%84%E5%BB%BA">hexo持久化构建以及给自有域名github-page上HTTPS</a></p>
-<p><a href="https://zhuanlan.zhihu.com/p/404615843">Git: submodule 子模块简明教程</a></p>
-<hr class="footnotes-sep" />
-<section class="footnotes">
-<ol class="footnotes-list">
-<li id="fn1" class="footnote-item"><p><a href="https://wylu.me/posts/3504e7d9/">Git子模块</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
-</li>
-</ol>
-</section>
 ]]></content>
   </entry>
   <entry>
