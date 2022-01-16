@@ -54,6 +54,10 @@ section h5 {
     font-size: 24px;
 }
 
+section p {
+    line-height: 32px;
+}
+
 .heart {
     width: 245px;
     height: 240px;

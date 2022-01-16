@@ -21,7 +21,7 @@ const ap = new APlayer({
         {
         name: '绝代风华',
         artist: '天下3-许嵩',
-        url: '/535dd84298a7c165cb46f6f5ab600f47.mp3',
+        url: '/juedaifenghua.mp3',
         cover: '/images/20220107135934.png'
         }
     ]
