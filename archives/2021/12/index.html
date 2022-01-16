@@ -233,15 +233,15 @@
     <header class="post-header">
       <div class="post-meta-container">
         <time itemprop="dateCreated"
-              datetime="2021-12-18T18:18:26+08:00"
+              datetime="2021-12-18T20:06:06+08:00"
               content="2021-12-18">
           12-18
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/posts/4a17b177.html" itemprop="url">
-            <span itemprop="name">Hexo 插件使用</span>
+          <a class="post-title-link" href="/posts/4a17b167.html" itemprop="url">
+            <span itemprop="name">换电脑如何更新 Hexo 博客</span>
           </a>
       </div>
 
@@ -253,15 +253,15 @@
     <header class="post-header">
       <div class="post-meta-container">
         <time itemprop="dateCreated"
-              datetime="2021-12-07T20:06:06+08:00"
-              content="2021-12-07">
-          12-07
+              datetime="2021-12-08T18:18:26+08:00"
+              content="2021-12-08">
+          12-08
         </time>
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/posts/4a17b167.html" itemprop="url">
-            <span itemprop="name">换电脑如何更新 Hexo 博客</span>
+          <a class="post-title-link" href="/posts/4a17b177.html" itemprop="url">
+            <span itemprop="name">Hexo 插件使用</span>
           </a>
       </div>
 
@@ -339,9 +339,13 @@
       let diffYears = Math.floor(diff/years);
       diffYears = diffYears < 10 ? "0" + diffYears : diffYears;
       let diffDays = Math.floor((diff/days)-diffYears*365);
+      diffDays = diffDays < 10 ? "0" + diffDays : diffDays;
       let diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+      diffHours = diffHours < 10 ? "0" + diffHours : diffHours;
       let diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+      diffMinutes = diffMinutes < 10 ? "0" + diffMinutes : diffMinutes;
       let diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      diffSeconds = diffSeconds < 10 ? "0" + diffSeconds : diffSeconds;
       document.getElementById("sitetime").innerHTML=" 已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
   }
   siteTime();

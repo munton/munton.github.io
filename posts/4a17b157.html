@@ -484,8 +484,8 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/posts/4a17b167.html" rel="prev" title="换电脑如何更新 Hexo 博客">
-                  <i class="fa fa-chevron-left"></i> 换电脑如何更新 Hexo 博客
+                <a href="/posts/4a17b177.html" rel="prev" title="Hexo 插件使用">
+                  <i class="fa fa-chevron-left"></i> Hexo 插件使用
                 </a>
             </div>
             <div class="post-nav-item">
@@ -543,9 +543,13 @@
       let diffYears = Math.floor(diff/years);
       diffYears = diffYears < 10 ? "0" + diffYears : diffYears;
       let diffDays = Math.floor((diff/days)-diffYears*365);
+      diffDays = diffDays < 10 ? "0" + diffDays : diffDays;
       let diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours);
+      diffHours = diffHours < 10 ? "0" + diffHours : diffHours;
       let diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes);
+      diffMinutes = diffMinutes < 10 ? "0" + diffMinutes : diffMinutes;
       let diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds);
+      diffSeconds = diffSeconds < 10 ? "0" + diffSeconds : diffSeconds;
       document.getElementById("sitetime").innerHTML=" 已运行 "+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒";
   }
   siteTime();

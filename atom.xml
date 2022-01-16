@@ -38,11 +38,30 @@
   </entry>
   
   <entry>
+    <title>换电脑如何更新 Hexo 博客</title>
+    <link href="http://munton.github.io/posts/4a17b167.html"/>
+    <id>http://munton.github.io/posts/4a17b167.html</id>
+    <published>2021-12-18T12:06:06.000Z</published>
+    <updated>2022-01-16T11:51:56.206Z</updated>
+    
+    
+    <summary type="html">&lt;p&gt;[TOC]&lt;/p&gt;
+&lt;h2 id=&quot;换电脑如何更新-hexo-博客&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#换电脑如何更新-hexo-博客&quot;&gt;&lt;/a&gt; 换电脑如何更新 Hexo 博客&lt;/h2&gt;
+&lt;h3 id=&quot;github-pages-hexo-搭建原理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#github-pages-hexo-搭建原理&quot;&gt;&lt;/a&gt; Github Pages + Hexo 搭建原理&lt;/h3&gt;
+&lt;p&gt;首先要知道通过Github Pages+Hexo搭建的博客，在username.github.io的仓库存储的是生成的静态网页（Hexo下所有生成的静态文件会放在public/文件夹中，所谓部署deploy其实就是&lt;br /&gt;
+将public/文件夹中内容上传到Git仓库username.github.io中。也就是说，你的仓库username.github.io中的文件只是博客（D:/MyBlog或者其他名字）文件夹下的public/下的文件），而真正的原始文件在本地的hexo文件夹中。&lt;/p&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>Hexo 插件使用</title>
     <link href="http://munton.github.io/posts/4a17b177.html"/>
     <id>http://munton.github.io/posts/4a17b177.html</id>
-    <published>2021-12-18T10:18:26.000Z</published>
-    <updated>2022-01-16T10:53:31.869Z</updated>
+    <published>2021-12-08T10:18:26.000Z</published>
+    <updated>2022-01-16T11:50:43.702Z</updated>
     
     
     <summary type="html">&lt;p&gt;[TOC]&lt;/p&gt;
@@ -51,25 +70,6 @@
 &lt;h4 id=&quot;安装&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#安装&quot;&gt;&lt;/a&gt; 安装&lt;/h4&gt;
 &lt;p&gt;在站点根目录执行以下命令安装：&lt;/p&gt;
 &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ npm install hexo-word-counter &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;$ hexo clean&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>换电脑如何更新 Hexo 博客</title>
-    <link href="http://munton.github.io/posts/4a17b167.html"/>
-    <id>http://munton.github.io/posts/4a17b167.html</id>
-    <published>2021-12-07T12:06:06.000Z</published>
-    <updated>2022-01-16T10:54:53.944Z</updated>
-    
-    
-    <summary type="html">&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h2 id=&quot;换电脑如何更新-hexo-博客&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#换电脑如何更新-hexo-博客&quot;&gt;&lt;/a&gt; 换电脑如何更新 Hexo 博客&lt;/h2&gt;
-&lt;h3 id=&quot;github-pages-hexo-搭建原理&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#github-pages-hexo-搭建原理&quot;&gt;&lt;/a&gt; Github Pages + Hexo 搭建原理&lt;/h3&gt;
-&lt;p&gt;首先要知道通过Github Pages+Hexo搭建的博客，在username.github.io的仓库存储的是生成的静态网页（Hexo下所有生成的静态文件会放在public/文件夹中，所谓部署deploy其实就是&lt;br /&gt;
-将public/文件夹中内容上传到Git仓库username.github.io中。也就是说，你的仓库username.github.io中的文件只是博客（D:/MyBlog或者其他名字）文件夹下的public/下的文件），而真正的原始文件在本地的hexo文件夹中。&lt;/p&gt;</summary>
     
     
     

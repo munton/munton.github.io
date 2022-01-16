@@ -5,7 +5,6 @@ const ap = new APlayer({
     loop: 'all',
     listFolded: true,
     listMaxHeight: 60,
-    preload: 'auto',
     mutex: true,
     audio: [
         {

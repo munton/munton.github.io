@@ -1,6 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>换电脑如何更新 Hexo 博客</title>
+    <url>/posts/4a17b167.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>[TOC]</p>
+<h2 id="换电脑如何更新-hexo-博客"><a class="markdownIt-Anchor" href="#换电脑如何更新-hexo-博客"></a> 换电脑如何更新 Hexo 博客</h2>
+<h3 id="github-pages-hexo-搭建原理"><a class="markdownIt-Anchor" href="#github-pages-hexo-搭建原理"></a> Github Pages + Hexo 搭建原理</h3>
+<p>首先要知道通过Github Pages+Hexo搭建的博客，在username.github.io的仓库存储的是生成的静态网页（Hexo下所有生成的静态文件会放在public/文件夹中，所谓部署deploy其实就是<br />
+将public/文件夹中内容上传到Git仓库username.github.io中。也就是说，你的仓库username.github.io中的文件只是博客（D:/MyBlog或者其他名字）文件夹下的public/下的文件），而真正的原始文件在本地的hexo文件夹中。</p>
+<span id="more"></span>
+<p>利用Github如何实现Hexo博客版本管理？也就是原电脑和新电脑都可以提交、更新博客，实现同步。我先抛砖引玉，简单来说就是在Git仓库username.github.io中，一个master分支用来存放生成的静态网页，一个hexo分支用来存放网站的原始文件。</p>
+<h3 id="首次搭建的电脑"><a class="markdownIt-Anchor" href="#首次搭建的电脑"></a> 首次搭建的电脑</h3>
+<ul>
+<li>
+<p>Github上创建分支，在 <a href="http://username.github.io">username.github.io</a> 博客仓库创建hexo分支，并设为默认分支。打开博客项目仓库的Settings-&gt;Branches-&gt;Default branch，点击切换分支修改为hexo</p>
+</li>
+<li>
+<p>在本地D盘下（位置任意）右键Git bash here，执行以下指令，把username.github.io项目文件colne到本地，也就是把仓库(username.github.io仓库hexo分支) 复制到本地（<a href="http://xn--username-8t1mk43bd0n739a.github.io">文件夹名username.github.io</a>）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 此时看Git bash窗口第一行语句，含username.github.io(hexo)</span></span><br><span class="line">git <span class="built_in">clone</span> git@github.com:username/username.github.io.git</span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/munton/munton.github.io.git</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>进入username.github.io文件夹，勾选显示所有隐藏文件和文件夹，进入刚才 clone 到本地的仓库，删掉除了 .git 文件夹以外的所有内容。</p>
+</li>
+<li>
+<p>在克隆的仓库下分别执行以下命令更新删除操作到远程，<a href="http://xn--username-8k1mf8bv2qcc4kv7jexdj4tss4a15biwz28ar23a50e52iimby75ucgtai13jy9n7u8b.github.io">把刚才删除操作引起的本地仓库变化更新到远程username.github.io</a></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch  </span><br><span class="line"><span class="comment">#出现* hexo</span></span><br><span class="line"></span><br><span class="line">git add -A <span class="comment">#添加所有文件到index</span></span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;--&quot;</span> </span><br><span class="line"><span class="comment">#把刚才删除操作提交本地git，出现delete mode，初始化Init</span></span><br><span class="line"></span><br><span class="line">git push origin hexo</span><br><span class="line"><span class="comment">#本地推送到远程，出现hexo -&gt; hexo</span></span><br><span class="line"><span class="comment">#此时刷新下github页面hexo分支应该已经被清空了</span></span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>将克隆仓库【<a href="http://username.github.io">username.github.io</a>】中的.git文件夹复制到博客文件夹【MyBlog】根目录下（含有 themes、source 等文件夹），<a href="http://xn--username-vp1m618avkb5h06erv8bz3hjwfu1ns8wvhas4pl31hglot0z3u4gtca.github.io">这样本机博客目录已经变成可以和远程username.github.io</a>(hexo )分支相连。</p>
+</li>
+<li>
+<p>在博客目录下执行命令同步到远程的hexo分支。注意，所有的步骤都已经执行过本地关联远程仓库操作了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add -A  <span class="comment">#添加所有文件到暂存区</span></span><br><span class="line">git commit -m <span class="string">&quot;备份Hexo(含主题)&quot;</span>   <span class="comment">#提交</span></span><br><span class="line">git push origin hexo  <span class="comment">#推送hexo分支到github</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong><code>git add -A</code>报错</strong></p>
+<p>原因：已经在当前的存储库中添加了另一个git存储库，外部存储库的克隆将不包含嵌入式存储库的内容</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hint: You<span class="string">&#x27;ve added another git repository inside your current repository.</span></span><br><span class="line"><span class="string">Clones of the outer repository will not contain the contents of the embedded repository and will not know how to obtain it.</span></span><br><span class="line"><span class="string">If you meant to add a submodule, use:git submodule add &lt;url&gt; themes/next</span></span><br><span class="line"><span class="string">If you added this path by mistake, you can remove it from the index with:</span></span><br><span class="line"><span class="string">git rm --cached themes/next</span></span><br><span class="line"><span class="string"> See &quot;git help submodule&quot; for more information.</span></span><br></pre></td></tr></table></figure>
+<p>解决（2选1，推荐使用Git子模块）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加子模块非常简单，命令如下：git submodule add &lt;url&gt; &lt;path&gt;其中，url为子模块的路径，path为该子模块存储的目录路径。使用git submodule add带有要开始跟踪的项目的绝对或相对 URL的命令。</span></span><br><span class="line">git submodule add &lt;url&gt; themes/next</span><br><span class="line">如</span><br><span class="line">git submodule add --branch v8.8.1 https://github.com/next-theme/hexo-theme-next themes/next_v8.8.1</span><br><span class="line"><span class="comment"># git submodule add https://github.com/munton/hexo-theme.git</span></span><br><span class="line"><span class="comment"># 用以下方法将它从暂存区index中删除</span></span><br><span class="line">git rm -cached themes/next</span><br></pre></td></tr></table></figure>
+<h3 id="另一台电脑的操作"><a class="markdownIt-Anchor" href="#另一台电脑的操作"></a> 另一台电脑的操作</h3>
+<ul>
+<li>
+<p>先把电脑上环境安装好，node.js、git、hexo，ssh key 也创建和添加好。</p>
+</li>
+<li>
+<p>选好博客安装的目录，git bash将远程仓库克隆到本地</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 仓库地址 <span class="comment">#默认分支为hexo</span></span><br><span class="line">或</span><br><span class="line">git <span class="built_in">clone</span> -b hexo 仓库地址 <span class="comment">#选择分支hexo</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>然后进入项目目录，安装依赖启动博客服务器，生成静态文件，浏览器打开 localhost:4000 可以看。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line"></span><br><span class="line">npm install hexo-deployer-git --save <span class="comment">#建议安装时加--save参数会把插件写入package.json，那么git clone下来后，只要npm install就能装好hexo所有的依赖</span></span><br><span class="line"></span><br><span class="line">hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
+<ul>
+<li>发布文章同之前的教程一样，写好文章后</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<h3 id="多电脑同步写博客"><a class="markdownIt-Anchor" href="#多电脑同步写博客"></a> 多电脑同步写博客</h3>
+<p>我们的博客仓库有两个分支，<em>master</em>分支和<em>hexo</em>分支，master分支用于存放Hexo生成的静态资源文件，hexo分支用于存放网站的原始文件。所以，我们在一台设备上写好一篇文章或进行了博客的修改后，在博客目录下执行以下命令，将master中的静态资源文件更新</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
+<p>执行以下命令，将hexo中的网站原始文件更新</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull <span class="comment">#拉取远程仓库，每次有新的操作的时候，别忘了在另一台电脑上更新</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;描述（自己写）&quot;</span></span><br><span class="line">git push origin hexo</span><br></pre></td></tr></table></figure>
+<p><strong>注意：每次有新的操作的时候，别忘了在另一台电脑上更新</strong></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull hexo <span class="comment">#分支名hexo</span></span><br></pre></td></tr></table></figure>
+<p>以后无论在哪台电脑上，更新以及提交博客，依次执行，<code>git pull</code>，<code>git add .</code>，<code>git commit -m &quot;--&quot;</code>，<code>git push origin hexo</code>，<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>即可。</p>
+]]></content>
+  </entry>
+  <entry>
+    <title>想象之中</title>
+    <url>/posts/7a6c86f1.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
+  </entry>
+  <entry>
     <title>Hexo + Github 搭建博客</title>
     <url>/posts/4a17b157.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>[TOC]</p>
@@ -218,77 +290,5 @@
 <p><a href="https://blog.csdn.net/qq_36667170/article/details/105846999">https://blog.csdn.net/qq_36667170/article/details/105846999</a></p>
 <p><a href="https://bugwz.com/2019/09/17/hexo-markdown-renderer/">https://bugwz.com/2019/09/17/hexo-markdown-renderer/</a></p>
 ]]></content>
-  </entry>
-  <entry>
-    <title>换电脑如何更新 Hexo 博客</title>
-    <url>/posts/4a17b167.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>[TOC]</p>
-<h2 id="换电脑如何更新-hexo-博客"><a class="markdownIt-Anchor" href="#换电脑如何更新-hexo-博客"></a> 换电脑如何更新 Hexo 博客</h2>
-<h3 id="github-pages-hexo-搭建原理"><a class="markdownIt-Anchor" href="#github-pages-hexo-搭建原理"></a> Github Pages + Hexo 搭建原理</h3>
-<p>首先要知道通过Github Pages+Hexo搭建的博客，在username.github.io的仓库存储的是生成的静态网页（Hexo下所有生成的静态文件会放在public/文件夹中，所谓部署deploy其实就是<br />
-将public/文件夹中内容上传到Git仓库username.github.io中。也就是说，你的仓库username.github.io中的文件只是博客（D:/MyBlog或者其他名字）文件夹下的public/下的文件），而真正的原始文件在本地的hexo文件夹中。</p>
-<span id="more"></span>
-<p>利用Github如何实现Hexo博客版本管理？也就是原电脑和新电脑都可以提交、更新博客，实现同步。我先抛砖引玉，简单来说就是在Git仓库username.github.io中，一个master分支用来存放生成的静态网页，一个hexo分支用来存放网站的原始文件。</p>
-<h3 id="首次搭建的电脑"><a class="markdownIt-Anchor" href="#首次搭建的电脑"></a> 首次搭建的电脑</h3>
-<ul>
-<li>
-<p>Github上创建分支，在 <a href="http://username.github.io">username.github.io</a> 博客仓库创建hexo分支，并设为默认分支。打开博客项目仓库的Settings-&gt;Branches-&gt;Default branch，点击切换分支修改为hexo</p>
-</li>
-<li>
-<p>在本地D盘下（位置任意）右键Git bash here，执行以下指令，把username.github.io项目文件colne到本地，也就是把仓库(username.github.io仓库hexo分支) 复制到本地（<a href="http://xn--username-8t1mk43bd0n739a.github.io">文件夹名username.github.io</a>）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 此时看Git bash窗口第一行语句，含username.github.io(hexo)</span></span><br><span class="line">git <span class="built_in">clone</span> git@github.com:username/username.github.io.git</span><br><span class="line"></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/munton/munton.github.io.git</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>进入username.github.io文件夹，勾选显示所有隐藏文件和文件夹，进入刚才 clone 到本地的仓库，删掉除了 .git 文件夹以外的所有内容。</p>
-</li>
-<li>
-<p>在克隆的仓库下分别执行以下命令更新删除操作到远程，<a href="http://xn--username-8k1mf8bv2qcc4kv7jexdj4tss4a15biwz28ar23a50e52iimby75ucgtai13jy9n7u8b.github.io">把刚才删除操作引起的本地仓库变化更新到远程username.github.io</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git branch  </span><br><span class="line"><span class="comment">#出现* hexo</span></span><br><span class="line"></span><br><span class="line">git add -A <span class="comment">#添加所有文件到index</span></span><br><span class="line"></span><br><span class="line">git commit -m <span class="string">&quot;--&quot;</span> </span><br><span class="line"><span class="comment">#把刚才删除操作提交本地git，出现delete mode，初始化Init</span></span><br><span class="line"></span><br><span class="line">git push origin hexo</span><br><span class="line"><span class="comment">#本地推送到远程，出现hexo -&gt; hexo</span></span><br><span class="line"><span class="comment">#此时刷新下github页面hexo分支应该已经被清空了</span></span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>将克隆仓库【<a href="http://username.github.io">username.github.io</a>】中的.git文件夹复制到博客文件夹【MyBlog】根目录下（含有 themes、source 等文件夹），<a href="http://xn--username-vp1m618avkb5h06erv8bz3hjwfu1ns8wvhas4pl31hglot0z3u4gtca.github.io">这样本机博客目录已经变成可以和远程username.github.io</a>(hexo )分支相连。</p>
-</li>
-<li>
-<p>在博客目录下执行命令同步到远程的hexo分支。注意，所有的步骤都已经执行过本地关联远程仓库操作了</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git add -A  <span class="comment">#添加所有文件到暂存区</span></span><br><span class="line">git commit -m <span class="string">&quot;备份Hexo(含主题)&quot;</span>   <span class="comment">#提交</span></span><br><span class="line">git push origin hexo  <span class="comment">#推送hexo分支到github</span></span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p><strong><code>git add -A</code>报错</strong></p>
-<p>原因：已经在当前的存储库中添加了另一个git存储库，外部存储库的克隆将不包含嵌入式存储库的内容</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hint: You<span class="string">&#x27;ve added another git repository inside your current repository.</span></span><br><span class="line"><span class="string">Clones of the outer repository will not contain the contents of the embedded repository and will not know how to obtain it.</span></span><br><span class="line"><span class="string">If you meant to add a submodule, use:git submodule add &lt;url&gt; themes/next</span></span><br><span class="line"><span class="string">If you added this path by mistake, you can remove it from the index with:</span></span><br><span class="line"><span class="string">git rm --cached themes/next</span></span><br><span class="line"><span class="string"> See &quot;git help submodule&quot; for more information.</span></span><br></pre></td></tr></table></figure>
-<p>解决（2选1，推荐使用Git子模块）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 添加子模块非常简单，命令如下：git submodule add &lt;url&gt; &lt;path&gt;其中，url为子模块的路径，path为该子模块存储的目录路径。使用git submodule add带有要开始跟踪的项目的绝对或相对 URL的命令。</span></span><br><span class="line">git submodule add &lt;url&gt; themes/next</span><br><span class="line">如</span><br><span class="line">git submodule add --branch v8.8.1 https://github.com/next-theme/hexo-theme-next themes/next_v8.8.1</span><br><span class="line"><span class="comment"># git submodule add https://github.com/munton/hexo-theme.git</span></span><br><span class="line"><span class="comment"># 用以下方法将它从暂存区index中删除</span></span><br><span class="line">git rm -cached themes/next</span><br></pre></td></tr></table></figure>
-<h3 id="另一台电脑的操作"><a class="markdownIt-Anchor" href="#另一台电脑的操作"></a> 另一台电脑的操作</h3>
-<ul>
-<li>
-<p>先把电脑上环境安装好，node.js、git、hexo，ssh key 也创建和添加好。</p>
-</li>
-<li>
-<p>选好博客安装的目录，git bash将远程仓库克隆到本地</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 仓库地址 <span class="comment">#默认分支为hexo</span></span><br><span class="line">或</span><br><span class="line">git <span class="built_in">clone</span> -b hexo 仓库地址 <span class="comment">#选择分支hexo</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>然后进入项目目录，安装依赖启动博客服务器，生成静态文件，浏览器打开 localhost:4000 可以看。</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install</span><br><span class="line"></span><br><span class="line">npm install hexo-deployer-git --save <span class="comment">#建议安装时加--save参数会把插件写入package.json，那么git clone下来后，只要npm install就能装好hexo所有的依赖</span></span><br><span class="line"></span><br><span class="line">hexo g &amp;&amp; hexo s</span><br></pre></td></tr></table></figure>
-<ul>
-<li>发布文章同之前的教程一样，写好文章后</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-<h3 id="多电脑同步写博客"><a class="markdownIt-Anchor" href="#多电脑同步写博客"></a> 多电脑同步写博客</h3>
-<p>我们的博客仓库有两个分支，<em>master</em>分支和<em>hexo</em>分支，master分支用于存放Hexo生成的静态资源文件，hexo分支用于存放网站的原始文件。所以，我们在一台设备上写好一篇文章或进行了博客的修改后，在博客目录下执行以下命令，将master中的静态资源文件更新</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo d -g</span><br></pre></td></tr></table></figure>
-<p>执行以下命令，将hexo中的网站原始文件更新</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull <span class="comment">#拉取远程仓库，每次有新的操作的时候，别忘了在另一台电脑上更新</span></span><br><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;描述（自己写）&quot;</span></span><br><span class="line">git push origin hexo</span><br></pre></td></tr></table></figure>
-<p><strong>注意：每次有新的操作的时候，别忘了在另一台电脑上更新</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git pull hexo <span class="comment">#分支名hexo</span></span><br></pre></td></tr></table></figure>
-<p>以后无论在哪台电脑上，更新以及提交博客，依次执行，<code>git pull</code>，<code>git add .</code>，<code>git commit -m &quot;--&quot;</code>，<code>git push origin hexo</code>，<code>hexo clean &amp;&amp; hexo g &amp;&amp; hexo d</code>即可。</p>
-]]></content>
-  </entry>
-  <entry>
-    <title>想象之中</title>
-    <url>/posts/7a6c86f1.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
   </entry>
 </search>
