@@ -7,7 +7,6 @@ const ap = new APlayer({
     listMaxHeight: 60,
     preload: 'auto',
     mutex: true,
-    lrcType: 3,
     audio: [
         {
         name: '等到烟火清凉',
