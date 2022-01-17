@@ -160,7 +160,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -172,9 +172,6 @@
       </span>
       <span class="links-of-author-item">
         <a href="https://github.com/munton" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;munton" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:dfgh20080808@qq.com" title="E-Mail → mailto:dfgh20080808@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
@@ -221,13 +218,33 @@
   <div class="post-block">
     <div class="post-content">
       <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 4 篇日志。 继续努力。</span>
+        <span class="collection-header">嗯..! 目前共计 5 篇日志。 继续努力。</span>
       </div>
 
       
     <div class="collection-year">
       <span class="collection-header">2021</span>
     </div>
+
+  <article itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+      <div class="post-meta-container">
+        <time itemprop="dateCreated"
+              datetime="2021-12-26T15:36:06+08:00"
+              content="2021-12-26">
+          12-26
+        </time>
+      </div>
+
+      <div class="post-title">
+          <a class="post-title-link" href="/posts/4a17b201.html" itemprop="url">
+            <span itemprop="name">JavaScript 中 Date() 日期对象</span>
+          </a>
+      </div>
+
+      
+    </header>
+  </article>
 
   <article itemscope itemtype="http://schema.org/Article">
     <header class="post-header">
@@ -312,27 +329,26 @@
   <span class="author" itemprop="copyrightHolder">sYu Xio</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div><!-- 网站运行时间统计 -->
-<div class="fa-battery">
+  </div><div class="fa-battery">
   <i class="fa fa-battery-quarter" aria-hidden="true" style="color: #44bf5e;"></i>
-  <span id="sitetime"></span>
+  <span id="runtime"></span>
 </div>
 <script>
   function runTime() {
     window.setTimeout("runTime()",1000);
-    var nowTime = +new Date();  
-      sinceTime = +new Date('2018-9-5 10:24:00'); 
-      times = (nowTime - sinceTime) / 1000; 
-      years = parseInt(times / 60 / 60 / 24 / 365);
-      years = years < 10 ? "0" + years : years; 
-      dates = parseInt(times / 60 / 60 / 24) - years*365;
-      dates = dates < 10 ? "0" + dates : dates;
-      hours = parseInt(times / 60 / 60 % 24);
-      hours = hours < 10 ? "0" + hours : hours;
-      minutes = parseInt(times / 60 % 60);
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = parseInt(times % 60);
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+    let nowTime = +new Date();  
+    let sinceTime = +new Date('2021-12-1 10:24:00'); 
+    let times = (nowTime - sinceTime) / 1000; 
+    let years = parseInt(times / 60 / 60 / 24 / 365);
+        years = years < 10 ? "0" + years : years; 
+    let dates = parseInt(times / 60 / 60 / 24) - years*365;
+        dates = dates < 10 ? "0" + dates : dates;
+    let hours = parseInt(times / 60 / 60 % 24);
+        hours = hours < 10 ? "0" + hours : hours;
+    let minutes = parseInt(times / 60 % 60);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+    let seconds = parseInt(times % 60);
+        seconds = seconds < 10 ? "0" + seconds : seconds;
     document.getElementById("runtime").innerHTML = " 已运行 " + years + ' 年 ' + dates + ' 天 ' + hours + ' 小时 ' + minutes + ' 分钟 ' + seconds + ' 秒 ';
   }
   runTime();

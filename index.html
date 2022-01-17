@@ -160,7 +160,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -172,9 +172,6 @@
       </span>
       <span class="links-of-author-item">
         <a href="https://github.com/munton" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;munton" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:dfgh20080808@qq.com" title="E-Mail → mailto:dfgh20080808@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
@@ -281,6 +278,101 @@
     
     <div class="post-body" itemprop="articleBody">
           
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://munton.github.io/posts/4a17b201.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar-site.jpg">
+      <meta itemprop="name" content="sYu Xio">
+      <meta itemprop="description" content="Stay Hungry . Stay Foolish.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="林下日月">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/posts/4a17b201.html" class="post-title-link" itemprop="url">JavaScript 中 Date() 日期对象</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-12-26 15:36:06" itemprop="dateCreated datePublished" datetime="2021-12-26T15:36:06+08:00">2021-12-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2022-01-17 21:11:21" itemprop="dateModified" datetime="2022-01-17T21:11:21+08:00">2022-01-17</time>
+      </span>
+
+  
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.4k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h2 id="javascript-中-date-日期对象"><a class="markdownIt-Anchor" href="#javascript-中-date-日期对象"></a> JavaScript 中 Date() 日期对象</h2>
+<p>Date() <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> 日期对象是一个构造函数，必须使用 new 来调用创建</p>
+<p>Date对象是基于1970年1月1日（世界标准时间）起的毫秒数，时间戳</p>
+<h3 id="网站计时案例分析"><a class="markdownIt-Anchor" href="#网站计时案例分析"></a> 网站计时案例分析</h3>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/posts/4a17b201.html#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
@@ -605,27 +697,26 @@
   <span class="author" itemprop="copyrightHolder">sYu Xio</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div><!-- 网站运行时间统计 -->
-<div class="fa-battery">
+  </div><div class="fa-battery">
   <i class="fa fa-battery-quarter" aria-hidden="true" style="color: #44bf5e;"></i>
-  <span id="sitetime"></span>
+  <span id="runtime"></span>
 </div>
 <script>
   function runTime() {
     window.setTimeout("runTime()",1000);
-    var nowTime = +new Date();  
-      sinceTime = +new Date('2018-9-5 10:24:00'); 
-      times = (nowTime - sinceTime) / 1000; 
-      years = parseInt(times / 60 / 60 / 24 / 365);
-      years = years < 10 ? "0" + years : years; 
-      dates = parseInt(times / 60 / 60 / 24) - years*365;
-      dates = dates < 10 ? "0" + dates : dates;
-      hours = parseInt(times / 60 / 60 % 24);
-      hours = hours < 10 ? "0" + hours : hours;
-      minutes = parseInt(times / 60 % 60);
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = parseInt(times % 60);
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+    let nowTime = +new Date();  
+    let sinceTime = +new Date('2021-12-1 10:24:00'); 
+    let times = (nowTime - sinceTime) / 1000; 
+    let years = parseInt(times / 60 / 60 / 24 / 365);
+        years = years < 10 ? "0" + years : years; 
+    let dates = parseInt(times / 60 / 60 / 24) - years*365;
+        dates = dates < 10 ? "0" + dates : dates;
+    let hours = parseInt(times / 60 / 60 % 24);
+        hours = hours < 10 ? "0" + hours : hours;
+    let minutes = parseInt(times / 60 % 60);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+    let seconds = parseInt(times % 60);
+        seconds = seconds < 10 ? "0" + seconds : seconds;
     document.getElementById("runtime").innerHTML = " 已运行 " + years + ' 年 ' + dates + ' 天 ' + hours + ' 小时 ' + minutes + ' 分钟 ' + seconds + ' 秒 ';
   }
   runTime();

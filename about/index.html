@@ -31,7 +31,7 @@
 <meta property="og:description" content="道虽迩，不行不至；事虽小，不为不成。这是永恒的道理。 做人做事，最怕的就是只说不做，眼高手低。 勇敢去做让你害怕的事，然后，你会发现不过如此。 希望屏幕前的你，能从这个地方，有所收获。 也许回过头来看这些曾经留下的足迹，未必不是一件妙事。   千言万语，道不尽书写的情 万水千山，挡不住见你的心   点我试试吧！">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-12-04T04:39:34.000Z">
-<meta property="article:modified_time" content="2022-01-16T13:18:35.110Z">
+<meta property="article:modified_time" content="2022-01-17T09:37:56.681Z">
 <meta property="article:author" content="sYu Xio">
 <meta name="twitter:card" content="summary">
 
@@ -163,7 +163,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -175,9 +175,6 @@
       </span>
       <span class="links-of-author-item">
         <a href="https://github.com/munton" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;munton" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
-      </span>
-      <span class="links-of-author-item">
-        <a href="mailto:dfgh20080808@qq.com" title="E-Mail → mailto:dfgh20080808@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
       </span>
   </div>
   <div class="cc-license site-overview-item animated" itemprop="license">
@@ -247,7 +244,7 @@
 万水千山，挡不住见你的心<br>
 </center>
 <hr />
-<p><a target="_blank" rel="noopener" data-pjax-state="unload" href="https://munton.github.io/Demo/about-me">点我试试吧！</a></p>
+<p><a target="_blank" href="https://munton.github.io/Demo/about-me">点我试试吧！</a></p>
 
       </div>
       
@@ -275,27 +272,26 @@
   <span class="author" itemprop="copyrightHolder">sYu Xio</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
-  </div><!-- 网站运行时间统计 -->
-<div class="fa-battery">
+  </div><div class="fa-battery">
   <i class="fa fa-battery-quarter" aria-hidden="true" style="color: #44bf5e;"></i>
-  <span id="sitetime"></span>
+  <span id="runtime"></span>
 </div>
 <script>
   function runTime() {
     window.setTimeout("runTime()",1000);
-    var nowTime = +new Date();  
-      sinceTime = +new Date('2018-9-5 10:24:00'); 
-      times = (nowTime - sinceTime) / 1000; 
-      years = parseInt(times / 60 / 60 / 24 / 365);
-      years = years < 10 ? "0" + years : years; 
-      dates = parseInt(times / 60 / 60 / 24) - years*365;
-      dates = dates < 10 ? "0" + dates : dates;
-      hours = parseInt(times / 60 / 60 % 24);
-      hours = hours < 10 ? "0" + hours : hours;
-      minutes = parseInt(times / 60 % 60);
-      minutes = minutes < 10 ? "0" + minutes : minutes;
-      seconds = parseInt(times % 60);
-      seconds = seconds < 10 ? "0" + seconds : seconds;
+    let nowTime = +new Date();  
+    let sinceTime = +new Date('2021-12-1 10:24:00'); 
+    let times = (nowTime - sinceTime) / 1000; 
+    let years = parseInt(times / 60 / 60 / 24 / 365);
+        years = years < 10 ? "0" + years : years; 
+    let dates = parseInt(times / 60 / 60 / 24) - years*365;
+        dates = dates < 10 ? "0" + dates : dates;
+    let hours = parseInt(times / 60 / 60 % 24);
+        hours = hours < 10 ? "0" + hours : hours;
+    let minutes = parseInt(times / 60 % 60);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+    let seconds = parseInt(times % 60);
+        seconds = seconds < 10 ? "0" + seconds : seconds;
     document.getElementById("runtime").innerHTML = " 已运行 " + years + ' 年 ' + dates + ' 天 ' + hours + ' 小时 ' + minutes + ' 分钟 ' + seconds + ' 秒 ';
   }
   runTime();

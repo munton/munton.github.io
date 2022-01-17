@@ -8,17 +8,17 @@
 function runTime() {
     window.setTimeout("runTime()",1000);
     var nowTime = +new Date();  // 现在时间戳
-        sinceTime = +new Date('2020-12-1 10:24:00'); // 传入建立时间转时间戳
-        times = (nowTime - sinceTime) / 1000; // 返回的是秒
-        years = parseInt(times / 60 / 60 / 24 / 365);
+    var sinceTime = +new Date('2020-12-1 10:24:00'); // 传入建立时间转时间戳
+    var times = (nowTime - sinceTime) / 1000; // 返回的是秒
+    var years = parseInt(times / 60 / 60 / 24 / 365);
         years = years < 10 ? "0" + years : years; // 三元运算符
-        dates = parseInt(times / 60 / 60 / 24) - years*365;
+    var dates = parseInt(times / 60 / 60 / 24) - years*365;
         dates = dates < 10 ? "0" + dates : dates;
-        hours = parseInt(times / 60 / 60 % 24);
+    var hours = parseInt(times / 60 / 60 % 24);
         hours = hours < 10 ? "0" + hours : hours;
-        minutes = parseInt(times / 60 % 60);
+    var minutes = parseInt(times / 60 % 60);
         minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = parseInt(times % 60);
+    var seconds = parseInt(times % 60);
         seconds = seconds < 10 ? "0" + seconds : seconds;
     document.getElementById("runtime").innerHTML = " 已运行 " + years + ' 年 ' + dates + ' 天 ' + hours + ' 小时 ' + minutes + ' 分钟 ' + seconds + ' 秒 ';
 }

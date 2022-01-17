@@ -291,4 +291,37 @@
 <p><a href="https://bugwz.com/2019/09/17/hexo-markdown-renderer/">https://bugwz.com/2019/09/17/hexo-markdown-renderer/</a></p>
 ]]></content>
   </entry>
+  <entry>
+    <title>JavaScript 中 Date() 日期对象</title>
+    <url>/posts/4a17b201.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="javascript-中-date-日期对象"><a class="markdownIt-Anchor" href="#javascript-中-date-日期对象"></a> JavaScript 中 Date() 日期对象</h2>
+<p>Date() <sup class="footnote-ref"><a href="#fn1" id="fnref1">[1]</a></sup> 日期对象是一个构造函数，必须使用 new 来调用创建</p>
+<p>Date对象是基于1970年1月1日（世界标准时间）起的毫秒数，时间戳</p>
+<h3 id="网站计时案例分析"><a class="markdownIt-Anchor" href="#网站计时案例分析"></a> 网站计时案例分析</h3>
+<span id="more"></span>
+<p>核心算法：现在的时间减去输入的时间，但是不能直接用时分秒相减；采用时间戳，时间毫秒数转换，parseInt() <sup class="footnote-ref"><a href="#fn2" id="fnref2">[2]</a></sup>取整</p>
+<p>转换公式如下：</p>
+<blockquote>
+<p>d = parseInt(总秒数/60/60/24) 计算天<br />
+h = parseInt(总秒数/60/60%24) 计算小时<br />
+m = parseInt(总秒数/60%60) 计算分<br />
+s = parseInt(总秒数%60) 计算秒</p>
+</blockquote>
+<h3 id="核心代码部分"><a class="markdownIt-Anchor" href="#核心代码部分"></a> 核心代码部分</h3>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 核心算法：现在的时间减去输入的时间，但是不能直接用时分秒相减；采用时间戳，时间毫秒数转换</span></span><br><span class="line"><span class="comment">// 转换公式如下：</span></span><br><span class="line"><span class="comment">// d = parseInt(总秒数/60/60/24) 计算天</span></span><br><span class="line"><span class="comment">// h = parseInt(总秒数/60/60%24) 计算小时</span></span><br><span class="line"><span class="comment">// m = parseInt(总秒数/60%60) 计算分</span></span><br><span class="line"><span class="comment">// s = parseInt(总秒数%60) 计算秒</span></span><br><span class="line"><span class="comment">// 封装一个函数,设置一个计时器</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">runTime</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.setTimeout(<span class="string">&quot;runTime()&quot;</span>,<span class="number">1000</span>);</span><br><span class="line">    <span class="keyword">var</span> nowTime = +<span class="keyword">new</span> <span class="built_in">Date</span>();  <span class="comment">// 现在时间戳</span></span><br><span class="line">        sinceTime = +<span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&#x27;2020-12-1 10:24:00&#x27;</span>); <span class="comment">// 传入建立时间转时间戳</span></span><br><span class="line">        times = (nowTime - sinceTime) / <span class="number">1000</span>; <span class="comment">// 返回的是秒</span></span><br><span class="line">        years = <span class="built_in">parseInt</span>(times / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span> / <span class="number">365</span>);</span><br><span class="line">        years = years &lt; <span class="number">10</span> ? <span class="string">&quot;0&quot;</span> + years : years; <span class="comment">// 三元运算符</span></span><br><span class="line">        dates = <span class="built_in">parseInt</span>(times / <span class="number">60</span> / <span class="number">60</span> / <span class="number">24</span>) - years*<span class="number">365</span>;</span><br><span class="line">        dates = dates &lt; <span class="number">10</span> ? <span class="string">&quot;0&quot;</span> + dates : dates;</span><br><span class="line">        hours = <span class="built_in">parseInt</span>(times / <span class="number">60</span> / <span class="number">60</span> % <span class="number">24</span>);</span><br><span class="line">        hours = hours &lt; <span class="number">10</span> ? <span class="string">&quot;0&quot;</span> + hours : hours;</span><br><span class="line">        minutes = <span class="built_in">parseInt</span>(times / <span class="number">60</span> % <span class="number">60</span>);</span><br><span class="line">        minutes = minutes &lt; <span class="number">10</span> ? <span class="string">&quot;0&quot;</span> + minutes : minutes;</span><br><span class="line">        seconds = <span class="built_in">parseInt</span>(times % <span class="number">60</span>);</span><br><span class="line">        seconds = seconds &lt; <span class="number">10</span> ? <span class="string">&quot;0&quot;</span> + seconds : seconds;</span><br><span class="line">    <span class="built_in">document</span>.getElementById(<span class="string">&quot;runtime&quot;</span>).innerHTML = <span class="string">&quot; 已运行 &quot;</span> + years + <span class="string">&#x27; 年 &#x27;</span> + dates + <span class="string">&#x27; 天 &#x27;</span> + hours + <span class="string">&#x27; 小时 &#x27;</span> + minutes + <span class="string">&#x27; 分钟 &#x27;</span> + seconds + <span class="string">&#x27; 秒 &#x27;</span>;</span><br><span class="line">&#125;</span><br><span class="line">runTime();</span><br></pre></td></tr></table></figure>
+<h3 id="三元运算符"><a class="markdownIt-Anchor" href="#三元运算符"></a> 三元运算符</h3>
+<p><strong>语法为：条件表达式 ? 表达式1 : 表达式2</strong></p>
+<p>说明：问号前面的位置是判断的条件，判断结果为bool型，为true时调用表达式1，为false时调用表达式2</p>
+<p>其逻辑为：如果条件表达式成立或者满足则执行表达式1，否则执行表达式2</p>
+<hr class="footnotes-sep" />
+<section class="footnotes">
+<ol class="footnotes-list">
+<li id="fn1" class="footnote-item"><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date">Date()</a> <a href="#fnref1" class="footnote-backref">↩︎</a></p>
+</li>
+<li id="fn2" class="footnote-item"><p><a href="https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/parseInt">parseInt()</a> <a href="#fnref2" class="footnote-backref">↩︎</a></p>
+</li>
+</ol>
+</section>
+]]></content>
+  </entry>
 </search>

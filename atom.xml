@@ -38,6 +38,24 @@
   </entry>
   
   <entry>
+    <title>JavaScript 中 Date() 日期对象</title>
+    <link href="http://munton.github.io/posts/4a17b201.html"/>
+    <id>http://munton.github.io/posts/4a17b201.html</id>
+    <published>2021-12-26T07:36:06.000Z</published>
+    <updated>2022-01-17T13:11:21.239Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;javascript-中-date-日期对象&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#javascript-中-date-日期对象&quot;&gt;&lt;/a&gt; JavaScript 中 Date() 日期对象&lt;/h2&gt;
+&lt;p&gt;Date() &lt;sup class=&quot;footnote-ref&quot;&gt;&lt;a href=&quot;#fn1&quot; id=&quot;fnref1&quot;&gt;[1]&lt;/a&gt;&lt;/sup&gt; 日期对象是一个构造函数，必须使用 new 来调用创建&lt;/p&gt;
+&lt;p&gt;Date对象是基于1970年1月1日（世界标准时间）起的毫秒数，时间戳&lt;/p&gt;
+&lt;h3 id=&quot;网站计时案例分析&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#网站计时案例分析&quot;&gt;&lt;/a&gt; 网站计时案例分析&lt;/h3&gt;</summary>
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>换电脑如何更新 Hexo 博客</title>
     <link href="http://munton.github.io/posts/4a17b167.html"/>
     <id>http://munton.github.io/posts/4a17b167.html</id>
