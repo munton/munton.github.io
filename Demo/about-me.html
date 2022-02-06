@@ -23,6 +23,7 @@
 	<div class="wrapper">
 		<main class="main">
 			<section class="text ">
+				<p>大家好，我是vae，<br>这是我即将发表的首张专辑自定义里面的一首推荐曲目，词曲编曲都是我自己，<br>希望这首歌曲能在这个寒冷的冬天带给大家一种温暖的感觉~</p>
 				<h5>About Me</h5>
 				<p>不想对这世界有太多的期待，<br>纯粹的活着承担生活带来的一切！<br>生平看过蓝月和日食，<br>行过许多地方的桥，<br>看过许多次数的云，<br>喝过许多种类的酒，<br>却没遇到正当最好年纪的人，<br>我也安慰自己，<br>爱情这东西时间很重要，<br>认识的太早或太晚都不行，<br>只是不免有时候站在那些风景里，<br>觉得非常难过，<br>觉得应该是两个人站在那里，<br>而不是一个人。</p>
 			</section>
@@ -124,7 +125,7 @@
 		function runTime() {
     		window.setTimeout("runTime()",1000);
     		var nowTime = +new Date();  // 现在时间戳
-        	var	sinceTime = +new Date('2018-9-5 10:24:00'); // 传入建立时间转时间戳
+        	var	sinceTime = +new Date('2007-9-10 10:24:00'); // 传入建立时间转时间戳
         	var	times = (nowTime - sinceTime) / 1000; // 返回的是秒
         	var	years = parseInt(times / 60 / 60 / 24 / 365);
         	var	years = years < 10 ? "0" + years : years; // 三元运算符
@@ -136,7 +137,7 @@
         	var	minutes = minutes < 10 ? "0" + minutes : minutes;
 			var	seconds = parseInt(times % 60);
         	var	seconds = seconds < 10 ? "0" + seconds : seconds;
-    		document.getElementById("runtime").innerHTML = " 已等候 " + years + ' 年 ' + dates + ' 天 ' + hours + ' 小时 ' + minutes + ' 分钟 ' + seconds + ' 秒 ';
+    		document.getElementById("runtime").innerHTML = " 已 " + years + ' 年 ' + dates + ' 天 ' + hours + ' 小时 ' + minutes + ' 分钟 ' + seconds + ' 秒 ';
 		}
 		runTime(); 
 		//获取滚动条当前的位置

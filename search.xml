@@ -324,6 +324,7 @@ s = parseInt(总秒数%60) 计算秒</p>
     <url>/posts/7a6c86f1.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="对浮动和清除浮动的理解"><a class="markdownIt-Anchor" href="#对浮动和清除浮动的理解"></a> 对“浮动”和“清除浮动”的理解</h2>
 <p>在最初 Html 刚刚出现时，并没有让布局元素以及大部分其他元素既能够<strong>设置宽高</strong>，<strong>又能够与其他元素处于同一行</strong>（表格元素除外）。块元素能够设置宽高，但是默认独占一行；行元素默认由内容撑开高度，虽然某个行元素能够和其他元素处于同一行，但是并不能设置宽高。</p>
+<span id="more"></span>
 <p>CSS中的浮动，主要是为了解决以上问题。设置浮动后，就能够更方便地进行页面布局。</p>
 <blockquote>
 <p>生活中的“浮动”–水槽</p>
@@ -335,6 +336,19 @@ s = parseInt(总秒数%60) 计算秒</p>
 <p>另一类是<strong>清除掉对父级元素的影响</strong>，主要包括<strong>空标签清浮动、br 标签清浮动、overflow: hidden、overflow: auto、父级元素浮动、after 伪元素清浮动</strong>等常见方法。</p>
 <p>其中使用较多的是 after 伪元素清浮动，该方法与空标签清浮动方法原理相同，其实现的基本代码为</p>
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;<span class="attribute">content</span>: <span class="string">&quot;\200B&quot;</span>; <span class="attribute">clear</span>: both; <span class="attribute">display</span>: block; <span class="attribute">height</span>: <span class="number">0</span>;&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+  </entry>
+  <entry>
+    <title>嵩语</title>
+    <url>/posts/7a6c86f2.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="嵩语"><a class="markdownIt-Anchor" href="#嵩语"></a> 嵩语</h2>
+<p>信手，写下几行诗句，最押韵的，竟然是我的叹息。 --许嵩 《静夜思》</p>
+<p>许多念念不忘，皆是一瞬；许多一瞬，却是念念不忘 --许嵩 《海上灵光》</p>
+<p>和我相处的最大好处是，永远不必担心我骗你。我保不齐也会说出客套话废话（人生嘛），但基本不会说出谎话。如果我厌恶你，就绝对伪装不出哪怕一秒的和善眼神，我保证能让你清晰的感受到我的厌恶；如果我爱你，就绝对会把全部心事都让你了然–对爱的人，从不进行耐心和智力上的较量。</p>
+<p>有人请教多啦A梦和大雄最后有没有在一起，我便问他那许仙和白蛇最后有没有在一起。“生之有涯”最后如何如何也不过是蜿蜒个几十年的一件小事，而大事是，他们，他们和我们曾经在一起过。</p>
+<p>很少有人承认自己的嫉妒心，因为这种心态很难自察。有时你嫉妒一个人，倒未必是觉得其完全没有才能，而是觉得其才能与其取得的名利不相配–总之，这厮运气好。其实，不必这样想，别人暗中吃过的苦头，你永远不知道，就算知道，你也未必吃的下去。</p>
+<p>大千世界，多得是想不通的事，多得是猜不透的心，多得是看不透的人。不如不想，不如不猜，不如不看，不如寄情山水，不如快意人生，不如，吃茶去。 --许嵩 《不如吃茶去》</p>
+<p>“我看着你，就像看见你所有的过往经历”，我不曾参与到你的历史里，但没有关系。在你的时间轴上发生过的一切–无论好的坏的，总之，造就了当下这个值得被爱的你。</p>
 ]]></content>
   </entry>
 </search>

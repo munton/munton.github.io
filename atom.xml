@@ -6,7 +6,7 @@
   <link href="http://munton.github.io/atom.xml" rel="self"/>
   
   <link href="http://munton.github.io/"/>
-  <updated>2022-02-06T06:57:37.464Z</updated>
+  <updated>2022-02-06T07:50:00.713Z</updated>
   <id>http://munton.github.io/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>对“浮动”和“清除浮动”的理解</title>
-    <link href="http://munton.github.io/posts/7a6c86f1.html"/>
-    <id>http://munton.github.io/posts/7a6c86f1.html</id>
-    <published>2022-01-07T08:43:00.000Z</published>
-    <updated>2022-02-06T06:57:37.464Z</updated>
+    <title>嵩语</title>
+    <link href="http://munton.github.io/posts/7a6c86f2.html"/>
+    <id>http://munton.github.io/posts/7a6c86f2.html</id>
+    <published>2022-01-15T08:43:00.000Z</published>
+    <updated>2022-02-06T07:50:00.713Z</updated>
     
     
       
@@ -31,6 +31,22 @@
     <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
         
       
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>对“浮动”和“清除浮动”的理解</title>
+    <link href="http://munton.github.io/posts/7a6c86f1.html"/>
+    <id>http://munton.github.io/posts/7a6c86f1.html</id>
+    <published>2022-01-07T08:43:00.000Z</published>
+    <updated>2022-02-06T07:09:25.722Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;对浮动和清除浮动的理解&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#对浮动和清除浮动的理解&quot;&gt;&lt;/a&gt; 对“浮动”和“清除浮动”的理解&lt;/h2&gt;
+&lt;p&gt;在最初 Html 刚刚出现时，并没有让布局元素以及大部分其他元素既能够&lt;strong&gt;设置宽高&lt;/strong&gt;，&lt;strong&gt;又能够与其他元素处于同一行&lt;/strong&gt;（表格元素除外）。块元素能够设置宽高，但是默认独占一行；行元素默认由内容撑开高度，虽然某个行元素能够和其他元素处于同一行，但是并不能设置宽高。&lt;/p&gt;</summary>
     
     
     
