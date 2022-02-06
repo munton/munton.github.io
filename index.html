@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/themes/orange/pace-theme-minimal.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js" integrity="sha256-gqd7YTjg/BtfqWSwsJOvndl0Bxc8gFImLEkXQT8+qj0=" crossorigin="anonymous"></script>
 
-<script class="next-config" data-name="main" type="application/json">{"hostname":"munton.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":true,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<script class="next-config" data-name="main" type="application/json">{"hostname":"munton.github.io","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.8.1","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"manual"},"mediumzoom":false,"lazyload":true,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 <meta name="description" content="Stay Hungry . Stay Foolish.">
 <meta property="og:type" content="website">
 <meta property="og:title" content="林下日月">
@@ -90,6 +90,7 @@
         <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
         <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+        <li class="menu-item menu-item-links"><a href="/links/" rel="section"><i class="fa fa-globe fa-fw"></i>友链</a></li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -202,7 +203,6 @@
     <span>0%</span>
   </div>
   <div class="reading-progress-bar"></div>
-  <a role="button" class="book-mark-link book-mark-link-fixed"></a>
 
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
@@ -232,7 +232,7 @@
     </span>
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
-          <a href="/posts/7a6c86f1.html" class="post-title-link" itemprop="url">想象之中</a>
+          <a href="/posts/7a6c86f1.html" class="post-title-link" itemprop="url">对“浮动”和“清除浮动”的理解</a>
         </h2>
 
         <div class="post-meta-container">
@@ -250,7 +250,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2022-01-16 14:56:47" itemprop="dateModified" datetime="2022-01-16T14:56:47+08:00">2022-01-16</time>
+        <time title="修改时间：2022-02-06 14:57:37" itemprop="dateModified" datetime="2022-02-06T14:57:37+08:00">2022-02-06</time>
       </span>
 
   
@@ -259,7 +259,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>0</span>
+      <span>724</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -277,7 +277,20 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          
+          <h2 id="对浮动和清除浮动的理解"><a class="markdownIt-Anchor" href="#对浮动和清除浮动的理解"></a> 对“浮动”和“清除浮动”的理解</h2>
+<p>在最初 Html 刚刚出现时，并没有让布局元素以及大部分其他元素既能够<strong>设置宽高</strong>，<strong>又能够与其他元素处于同一行</strong>（表格元素除外）。块元素能够设置宽高，但是默认独占一行；行元素默认由内容撑开高度，虽然某个行元素能够和其他元素处于同一行，但是并不能设置宽高。</p>
+<p>CSS中的浮动，主要是为了解决以上问题。设置浮动后，就能够更方便地进行页面布局。</p>
+<blockquote>
+<p>生活中的“浮动”–水槽</p>
+</blockquote>
+<p>浮动会导致元素<strong>脱离文档流</strong>。脱离文档流的元素并不会占据<strong>物理空间</strong>，而是会引起父级<strong>元素高度塌陷</strong>，也会对浮动元素之后的<strong>其他兄弟级</strong>元素造成布局影响。</p>
+<p>在浮动的过程中，左右浮动的模块并不会互相干涉、阻碍对方运动，左浮动的模块可能会阻挡其他左浮动的模块，右浮动的模块可能会阻挡其他右浮动的模块。但是在最终空间的占用上，还是会互相有所影响。</p>
+<p>为了减少以上影响，就需要及时清除浮动。</p>
+<p>一类是<strong>清除掉对后面兄弟级元素的影响</strong>，只需为浮动元素的下一个兄弟级元素设置 <code>clear: both/left/right;</code>属性；如果希望浮动元素与清除浮动的兄弟级元素之间有一定间距，为<strong>浮动元素后面的一个兄弟级元素设置顶部外边距时会失效</strong>（实际上是与浮动元素内容空白区叠加），此时可以为浮动元素设置下边距。</p>
+<p>另一类是<strong>清除掉对父级元素的影响</strong>，主要包括<strong>空标签清浮动、br 标签清浮动、overflow: hidden、overflow: auto、父级元素浮动、after 伪元素清浮动</strong>等常见方法。</p>
+<p>其中使用较多的是 after 伪元素清浮动，该方法与空标签清浮动方法原理相同，其实现的基本代码为</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#123;<span class="attribute">content</span>: <span class="string">&quot;\200B&quot;</span>; <span class="attribute">clear</span>: both; <span class="attribute">display</span>: block; <span class="attribute">height</span>: <span class="number">0</span>;&#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
 
@@ -350,7 +363,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
+      <span>2 分钟</span>
     </span>
 </div>
 
@@ -445,7 +458,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -541,7 +554,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>3 分钟</span>
+      <span>4 分钟</span>
     </span>
 </div>
 
@@ -638,7 +651,7 @@
         <i class="far fa-clock"></i>
       </span>
       <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>8 分钟</span>
+      <span>11 分钟</span>
     </span>
 </div>
 
@@ -734,7 +747,7 @@
   <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js" integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/lozad@1.16.0/dist/lozad.min.js" integrity="sha256-mOFREFhqmHeQbXpK2lp4nA3qooVgACfh88fpJftLBbc=" crossorigin="anonymous"></script>
-<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/bookmark.js"></script><script src="/js/pjax.js"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script><script src="/js/pjax.js"></script>
 
   
 <script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>

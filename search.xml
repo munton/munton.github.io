@@ -68,11 +68,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>想象之中</title>
-    <url>/posts/7a6c86f1.html</url>
-    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script>]]></content>
-  </entry>
-  <entry>
     <title>Hexo + Github 搭建博客</title>
     <url>/posts/4a17b157.html</url>
     <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><p>[TOC]</p>
@@ -322,6 +317,24 @@ s = parseInt(总秒数%60) 计算秒</p>
 </li>
 </ol>
 </section>
+]]></content>
+  </entry>
+  <entry>
+    <title>对“浮动”和“清除浮动”的理解</title>
+    <url>/posts/7a6c86f1.html</url>
+    <content><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h2 id="对浮动和清除浮动的理解"><a class="markdownIt-Anchor" href="#对浮动和清除浮动的理解"></a> 对“浮动”和“清除浮动”的理解</h2>
+<p>在最初 Html 刚刚出现时，并没有让布局元素以及大部分其他元素既能够<strong>设置宽高</strong>，<strong>又能够与其他元素处于同一行</strong>（表格元素除外）。块元素能够设置宽高，但是默认独占一行；行元素默认由内容撑开高度，虽然某个行元素能够和其他元素处于同一行，但是并不能设置宽高。</p>
+<p>CSS中的浮动，主要是为了解决以上问题。设置浮动后，就能够更方便地进行页面布局。</p>
+<blockquote>
+<p>生活中的“浮动”–水槽</p>
+</blockquote>
+<p>浮动会导致元素<strong>脱离文档流</strong>。脱离文档流的元素并不会占据<strong>物理空间</strong>，而是会引起父级<strong>元素高度塌陷</strong>，也会对浮动元素之后的<strong>其他兄弟级</strong>元素造成布局影响。</p>
+<p>在浮动的过程中，左右浮动的模块并不会互相干涉、阻碍对方运动，左浮动的模块可能会阻挡其他左浮动的模块，右浮动的模块可能会阻挡其他右浮动的模块。但是在最终空间的占用上，还是会互相有所影响。</p>
+<p>为了减少以上影响，就需要及时清除浮动。</p>
+<p>一类是<strong>清除掉对后面兄弟级元素的影响</strong>，只需为浮动元素的下一个兄弟级元素设置 <code>clear: both/left/right;</code>属性；如果希望浮动元素与清除浮动的兄弟级元素之间有一定间距，为<strong>浮动元素后面的一个兄弟级元素设置顶部外边距时会失效</strong>（实际上是与浮动元素内容空白区叠加），此时可以为浮动元素设置下边距。</p>
+<p>另一类是<strong>清除掉对父级元素的影响</strong>，主要包括<strong>空标签清浮动、br 标签清浮动、overflow: hidden、overflow: auto、父级元素浮动、after 伪元素清浮动</strong>等常见方法。</p>
+<p>其中使用较多的是 after 伪元素清浮动，该方法与空标签清浮动方法原理相同，其实现的基本代码为</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">&#123;<span class="attribute">content</span>: <span class="string">&quot;\200B&quot;</span>; <span class="attribute">clear</span>: both; <span class="attribute">display</span>: block; <span class="attribute">height</span>: <span class="number">0</span>;&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
   </entry>
 </search>
