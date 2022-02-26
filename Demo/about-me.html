@@ -127,7 +127,7 @@
     		var nowTime = +new Date();  // 现在时间戳
         	var	sinceTime = +new Date('2007-9-10 10:24:00'); // 传入建立时间转时间戳
         	var	times = (nowTime - sinceTime) / 1000; // 返回的是秒
-        	var	years = parseInt(times / 60 / 60 / 24 / 365);
+        	var	years = parseInt(times/60/60/24/365);
         	var	years = years < 10 ? "0" + years : years; // 三元运算符
 			var	dates = parseInt(times / 60 / 60 / 24) - years*365;
         	var	dates = dates < 10 ? "0" + dates : dates;

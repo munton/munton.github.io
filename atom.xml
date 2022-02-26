@@ -6,7 +6,7 @@
   <link href="http://munton.github.io/atom.xml" rel="self"/>
   
   <link href="http://munton.github.io/"/>
-  <updated>2022-02-06T07:50:00.713Z</updated>
+  <updated>2022-02-26T15:09:17.627Z</updated>
   <id>http://munton.github.io/</id>
   
   <author>
@@ -17,20 +17,35 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>SOP到底是什么？</title>
+    <link href="http://munton.github.io/posts/7a6c88f4.html"/>
+    <id>http://munton.github.io/posts/7a6c88f4.html</id>
+    <published>2022-02-28T14:43:30.000Z</published>
+    <updated>2022-02-26T15:09:17.627Z</updated>
+    
+    
+    <summary type="html">&lt;h2 id=&quot;sop到底是什么&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#sop到底是什么&quot;&gt;&lt;/a&gt; SOP到底是什么？&lt;/h2&gt;
+&lt;h3 id=&quot;sop定义&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#sop定义&quot;&gt;&lt;/a&gt; SOP定义&lt;/h3&gt;
+&lt;p&gt;SOP全称为Standard Operating Procedure，即“标准作业程序”，就是将某一事件的标准操作步骤和要求以统一的格式描述出来，用来&lt;strong&gt;指导和规范&lt;/strong&gt;日常的工作。SOP的精髓是将细节进行量化，通俗来讲，SOP就是&lt;strong&gt;对某一程序中的关键控制点进行细化和量化&lt;/strong&gt;。&lt;/p&gt;</summary>
+    
+    
+    
+    
+    <category term="IE" scheme="http://munton.github.io/tags/IE/"/>
+    
+  </entry>
+  
+  <entry>
     <title>嵩语</title>
     <link href="http://munton.github.io/posts/7a6c86f2.html"/>
     <id>http://munton.github.io/posts/7a6c86f2.html</id>
     <published>2022-01-15T08:43:00.000Z</published>
-    <updated>2022-02-06T07:50:00.713Z</updated>
+    <updated>2022-02-06T11:09:16.892Z</updated>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;link rel=&quot;stylesheet&quot; class=&quot;aplayer-secondary-style-marker&quot; href=&quot;\assets\css\APlayer.min.css&quot;&gt;&lt;script src=&quot;\assets\js\APlayer.min.js&quot;</summary>
-        
-      
+    <summary type="html">&lt;h2 id=&quot;嵩语&quot;&gt;&lt;a class=&quot;markdownIt-Anchor&quot; href=&quot;#嵩语&quot;&gt;&lt;/a&gt; 嵩语&lt;/h2&gt;
+&lt;p&gt;信手，写下几行诗句，最押韵的，竟然是我的叹息。 --许嵩 《静夜思》&lt;/p&gt;
+&lt;p&gt;许多念念不忘，皆是一瞬；许多一瞬，却是念念不忘 --许嵩 《海上灵光》&lt;/p&gt;</summary>
     
     
     
